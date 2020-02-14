@@ -34,9 +34,9 @@ nav a {
 
 body {
     line-height: 1;
-    background-image: url('/images/Background.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 /* global */
@@ -83,13 +83,60 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+.none {
+  display: none;
+}
 
 
+/* header, nav */
+header {
+  width: 1000px;
+}
+.navbar {
+  width: 80%;
+}
+.nav-item {
+  padding: 30px 10px 20px 10px;
+}
 
+/* main, background */
+.main-container {
+  width: 1000px;
+  background: url(../images/spine.jpg);
+  background-repeat: no-repeat;
+}
 
-
-/*----------------------------------------------------*/
-
+/* home, logo */
+.logo {
+  width: 400px;
+  margin-left: 10%;
+}
+.logo img {
+  width: 400px;
+}
+.logo span {
+  bottom: 20%;
+  left: 10px;
+  font-size: 18px;
+}
+.logo span span {
+  margin-top: 5px;
+}
 
 
 .mySlides {display: none;}
@@ -97,28 +144,28 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
 }
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 3.5s;
-  animation-name: fade;
-  animation-duration:0s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3.5s;
+    animation-name: fade;
+    animation-duration:0s;
 }
 
 @-webkit-keyframes fade {

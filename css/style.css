@@ -191,24 +191,24 @@ header {
 
 /* home, logo, about */
 .home {
-  height: 90vh;
+  min-height: 100vh;
   -webkit-box-shadow: inset 0px -200px 130px -37px rgba(180,181,183,1);
   -moz-box-shadow: inset 0px -200px 130px -37px rgba(180,181,183,1);
   box-shadow: inset 0px -200px 130px -37px rgba(180,181,183,1);
 }
-.logo {
+.home .logo {
   width: 400px;
   margin-left: 10%;
   bottom: 50px;
 }
-.logo img {
+.home .logo img {
   width: 400px;
 }
-.logo span {
+.home .logo span {
   bottom: 20%;
   left: 10px;
 }
-.logo span span {
+.home .logo span span {
   margin-top: 5px;
 }
 .about {
@@ -392,8 +392,76 @@ img {vertical-align: middle;}
 
 /* media queries */
 @media screen and (max-width: 1440px) {
+  /* global */
+  body {
+    font-size: 16px;
+  }
+
+  /* header, nav */
+  .navbar {
+    width: 80%;
+  }
+
+  /* main */
   .main-container {
     width: 80%;
+  }
+
+  /* home, logo, about */
+  .home {
+    -webkit-box-shadow: inset 0px -300px 130px -37px rgba(180,181,183,1);
+    -moz-box-shadow: inset 0px -300px 130px -37px rgba(180,181,183,1);
+    box-shadow: inset 0px -300px 130px -37px rgba(180,181,183,1);
+  }
+  .home .logo {
+    margin-left: 5%;
+    width: 35%;
+  }
+  .home .logo img {
+    width: 100%;
+  }
+  .home .logo span {
+    width: 110%;
+  }
+  .home .about {
+    right: 5%;
+    top: 50%;
+  }
+
+  /* team */
+  .section-padding {
+    padding: 30px 5% 0 5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* global */
+  body {
+    font-size: 14px;
+  }
+
+  /* main */
+  .main-container {
+    width: 90%;
+    font-size: 14px !important;
+  }
+
+  /* home, logo, about */
+  .home  {
+    -webkit-box-shadow: inset 0px -350px 130px -37px rgba(180,181,183,1);
+    -moz-box-shadow: inset 0px -350px 130px -37px rgba(180,181,183,1);
+    box-shadow: inset 0px -350px 130px -37px rgba(180,181,183,1);
+  }
+  .home .logo {
+    margin-left: 5%;
+  }
+  .home .logo span {
+    bottom: 15%;
+  }
+
+  /* team */
+  .teamSection p {
+    font-size: 14px;
   }
 }
 

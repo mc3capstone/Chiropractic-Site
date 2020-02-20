@@ -389,6 +389,14 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
+
+/* media queries */
+@media screen and (max-width: 1440px) {
+  .main-container {
+    width: 80%;
+  }
+}
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}

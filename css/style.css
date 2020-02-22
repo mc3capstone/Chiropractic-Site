@@ -164,6 +164,12 @@ input {
 .section {
   top: 100px;
 }
+.button {
+  background-color: #E58E46;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+}
 
 
 /* header, nav */
@@ -300,12 +306,36 @@ header {
 }
 
 /* appointment */
-.appointment {
-  padding: 30px 10% 0 10%;
+.appointment .divider {
+  width: 400px;
 }
-.appointment h1 {
-  width: 40%;
-  margin-left: 610px;
+.appointment form {
+  margin: 30px 0;
+}
+.appointment .field {
+  display: block;
+  width: 85%;
+  margin-bottom: 10px;
+}
+.appointment-section .time-radio {
+  display: block;
+}
+.appointment .appointment-section + .appointment-section {
+ margin-left: 20px;
+}
+.appointment .appointment-section:nth-child(1) {
+  grid-column: 1/4;
+}
+.appointment .appointment-section:nth-child(2) {
+  grid-column: 4/10;
+}
+.appointment .appointment-section:nth-child(3) {
+  grid-column: 10/13;
+}
+.appointment button {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 15px;
 }
 
 /* Slideshow */
@@ -351,8 +381,6 @@ img {
   height: 50px;
   position: absolute;
   bottom: 0;
-  background-color: sandybrown;
-  color: #fff;
 }
 .contactForm textarea {
   width: 100%;

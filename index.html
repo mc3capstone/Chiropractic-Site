@@ -139,6 +139,41 @@
             </div>
         </section>
 
+        <!--appointment-->
+        <section class="appointment section relative">
+            <span class="divider absolute"></span>
+            <div class="section-padding">
+                <h1 class="title text-right">Request an Appointment</h1>
+                <form class="grid-wrap">
+                    <div class="appointment-section">
+                        <label>First and last name</label>
+                        <input type="text" id="name" class="field">
+                        <label>Email</label>
+                        <input type="email" id="email" class="field">
+                        <label>Phone</label>
+                        <input type="phone" id="phone" class="field">
+                        <input type="checkbox">
+                        <span>Yes, I would like to receive eye appointment reminders via text message.</span>
+                    </div>
+                    <div class="appointment-section">
+                        <h3>Choose a date</h3>
+                        <input type="text" id="date" class="field">
+                    </div>
+                    <div class="appointment-section">
+                        <h3>Pick a time</h3>
+                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
+                        <button type="submit" class="button">Book Now</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
         <!--testimonials-->
         <section class="testimonials section relative" id="testimonialsID">
             <span class="divider absolute"></span>
@@ -180,13 +215,13 @@
                         <label for="subject">Subject</label>
                         <input type="text" id="subject" name="subject" value="">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" value="">
+                        <input type="email" id="email2" name="email" value="">
                     </div>
                     <div id="formItem2">
                         <label for="message">Message</label>
                         <textarea type="text" id="message" name="message" value=""></textarea>
                     </div>
-                    <input type="submit" value="Submit" id="formItem3">
+                    <input type="submit" value="Submit" id="formItem3" class="button">
                 </form>
             </div>
         </div>
@@ -285,6 +320,7 @@
             }, 800);
         });
 
+        
     </script>
 </body>
 

@@ -161,13 +161,13 @@
                     </div>
                     <div class="appointment-section">
                         <h3>Pick a time</h3>
-                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
                         <button type="submit" class="button">Book Now</button>
                     </div>
                 </form>
@@ -175,9 +175,9 @@
         </section>
 
         <!--testimonials-->
-        <section class="testimonials section relative" id="testimonialsID">
+        <section class="testimonials section relative">
             <span class="divider absolute"></span>
-            <div class="section-padding">
+            <div id="testimonialsID">
                 <h1 class="title text-right">Words From Our Clients</h1>
 
                 <div class="slideshow-container relative">
@@ -193,7 +193,7 @@
                     </div>
 
                     <div class="mySlides fade">
-                        <img src="images/testimonials3.jpg" style="width:100%">
+                        <img src="images/testimonials3.jpg">
                         <div class="text absolute">Caption Three</div>
                     </div>
 
@@ -225,6 +225,12 @@
                 </form>
             </div>
         </div>
+
+        <!--Map-->
+        <section class="map relative">
+            <span class="center-all">map</span>
+            <div id="mapid"></div>
+        </section>
     </main>
 
 
@@ -247,10 +253,6 @@
         }
 
     </script>
-
-
-
-    <!--Map-->
 
 
 

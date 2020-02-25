@@ -304,10 +304,16 @@ header {
 .testimonials .divider {
   width: 420px;
 }
+#testimonialsID {
+  padding-top: 30px;
+}
+#testimonialsID h1 {
+  margin-right: 5%;
+}
 
 /* appointment */
 .appointment .divider {
-  width: 400px;
+  width: 450px;
 }
 .appointment form {
   margin: 30px 0;
@@ -342,7 +348,8 @@ header {
 .slideshow-container {
   position: relative;
   margin: auto;
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .slideshow-container .text {
   top: 70%;
@@ -350,14 +357,14 @@ header {
 .mySlides {
   display: none;
 }
-img {
-  vertical-align: middle;
+.mySlides img {
+  width: 100%;
 }
 
 /* contact */
 .contactForm {
   margin-top: 150px;
-  padding-bottom: 70px;
+  margin-bottom: 70px;
 }
 .contactForm .divider {
   width: 360px;
@@ -385,6 +392,13 @@ img {
 .contactForm textarea {
   width: 100%;
   height: 100%;
+}
+
+/* map */
+.map {
+  background-color: #e3e3e3;
+  margin-top: 30px;
+  height: 300px;
 }
 
 /* footer */

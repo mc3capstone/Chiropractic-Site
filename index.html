@@ -38,6 +38,18 @@
                 <li class="nav-item inline-block z-1 relative">
                     <a href="index.html#contactID">Contact Us</a>
                 </li>
+                <li class="nav-item inline-block z-1 relative">
+                    <a href="https://www.facebook.com/Goodman-Family-Chiropractic-153865104663415/?fref=ts" target="_blank"><img src="images/icon_facebook.png" id="iconFacebook"></a>
+                </li>
+                <li class="nav-item inline-block z-1 relative">
+                    <a href="https://twitter.com/drgoodybones" target="_blank"><img src="images/icon_twitter.png" id="iconTwitter"></a>
+                </li>
+                <li class="nav-item inline-block z-1 relative">
+                    <a href="https://www.linkedin.com/in/david-goodman-d-c-215657a" target="_blank"><img src="images/icon_linkedin.png" id="iconLinkedIn"></a>
+                </li>
+                <li class="nav-item inline-block z-1 relative">
+                    <a href="https://www.instagram.com/drgoodbones/?hl=en" target="_blank"><img src="images/icon_instagram.png" id="iconInstagram"></a>
+                </li>
             </ul>
         </nav>
         <!--Nav Bar Ends-->
@@ -218,7 +230,7 @@
             <div class="section-padding">
                 <h1 class="title text-right">Get in touch with us</h1>
                 <p>Don’t hesitate to call and ask for me if there are any questions you might have related to our services.</p>
-                <form class="grid-wrap relative">
+                <form class="grid-wrap relative" id="contactForm" method="post" action="">
                     <div id="formItem1">
                         <label for="firstName">Full name</label>
                         <input type="text" id="firstName" name="firstName" value="">
@@ -331,6 +343,45 @@
                 scrollTop: $(this.hash).offset().top
             }, 800);
         });
+    </script>
+    
+    <!--Contact Validation Script-->
+    <script type="text/javascript" src="jquery.min.js">
+        $(document).ready(function() {
+            $('#firstName').on('input', function(){
+                var input=$(this);
+                var is_name=input.val();
+                if(is_name){input.removeClass("invalid").addClass("valid");}
+                else {input.removeClass("valid").addClass("invalid");}
+            });
+            
+            $('#subject').keyup(function(event) {
+                var input=$(this);
+                var subject=$(this).val();
+                console.log(subject);
+                if(subject){input.removeClass("invalid").addClass("valid");}
+                else{input.removeClass("valid").addClass("invalid");}
+            });
+        
+            $('#email2').on('input', function() {
+	           var input=$(this);
+	           var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	           var is_email=re.test(input.val());
+	           if(is_email){input.removeClass("invalid").addClass("valid");}
+	           else{input.removeClass("valid").addClass("invalid");}
+            });
+            
+            $('#message').keyup(function(event) {
+                var input=$(this);
+                var message=$(this).val();
+                console.log(message);
+                if(message){input.removeClass("invalid").addClass("valid");}
+                else{input.removeClass("valid").addClass("invalid");}	
+            });
+            
+            
+        });
+    
     </script>
 </body>
 

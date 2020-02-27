@@ -585,6 +585,33 @@ img {vertical-align: middle;}
   }
 }
 
+/* social icons */
+#iconFacebook {
+    width: 30px;
+    padding: 0px;
+    margin-left: 970%;
+}
+
+#iconTwitter {
+    width: 30px;
+    padding: 0px;
+    margin-left: 970%;
+}
+
+#iconLinkedIn {
+    width: 30px;
+    padding: 0px;
+    margin-left: 970%;
+}
+
+#iconInstagram {
+    width: 30px;
+    padding: 0px;
+    margin-left: 970%;
+}
+
+
+
 @media screen and (min-width: 1024px) {
   /* global */
   .section {

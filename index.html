@@ -38,6 +38,18 @@
                 <li class="nav-item inline-block z-1 relative">
                     <a href="index.html#contactID">Contact Us</a>
                 </li>
+                <li class="nav-item inline-block z-1 relative">
+                    <a href="https://www.facebook.com/Goodman-Family-Chiropractic-153865104663415/?fref=ts" target="_blank"><img src="images/icon_facebook.png" id="iconFacebook"></a>
+                </li>
+                <li class="nav-item inline-block z-1 relative">
+                    <a href="https://twitter.com/drgoodybones" target="_blank"><img src="images/icon_twitter.png" id="iconTwitter"></a>
+                </li>
+                <li class="nav-item inline-block z-1 relative">
+                    <a href="https://www.linkedin.com/in/david-goodman-d-c-215657a" target="_blank"><img src="images/icon_linkedin.png" id="iconLinkedIn"></a>
+                </li>
+                <li class="nav-item inline-block z-1 relative">
+                    <a href="https://www.instagram.com/drgoodbones/?hl=en" target="_blank"><img src="images/icon_instagram.png" id="iconInstagram"></a>
+                </li>
             </ul>
         </nav>
         <!--Nav Bar Ends-->
@@ -80,8 +92,10 @@
             <!--Our Team-->
             <div class="teamSection section-padding">
                 <div id="ourTeamIntro">
-                    <h1 class="title">OUR TEAM</h1>
-                    <h3>PROFFESIONALS YOU CAN TRUST</h3>
+                    <div class="title-wrap">
+                        <h1 class="title">OUR TEAM</h1>
+                        <h3>PROFFESIONALS YOU CAN TRUST</h3>
+                    </div>
                     <p class="indent">Thank you for visiting our website! At our practice, the focus is on gentle chiropractic care, stretching/flexibility, strengthening, and massage for the entire family. Our job is to help you feel your best. Sometimes it just takes a little help!</p>
                     <p class="indent">“I try to keep it simple. Better motion, and better structure, equals better function of the body. There might be a number of reasons you’re interested in chiropractic."</p>
                     <p class="indent">Our staff is dedicated to helping you have a superior chiropractic experience at our office. We are dedicated to helping you with any questions you might have including, scheduling and financial/insurance issues.</p>
@@ -218,7 +232,7 @@
             <div class="section-padding">
                 <h1 class="title text-right">Get in touch with us</h1>
                 <p>Don’t hesitate to call and ask for me if there are any questions you might have related to our services.</p>
-                <form class="grid-wrap relative">
+                <form class="grid-wrap relative" id="contactForm" method="post" action="">
                     <div id="formItem1">
                         <label for="firstName">Full name</label>
                         <input type="text" id="firstName" name="firstName" value="">
@@ -241,6 +255,61 @@
             <span class="center-all">map</span>
             <div id="mapid"></div>
         </section>
+
+        <footer class="mobile-footer">
+            <div class="footer-container horizontal-center2 grid-wrap">
+                <div class="footer-logo footer-section relative">
+                    <h1 class="inline-block horizontal-center">Logo</h1>
+                </div>
+    
+                <div class="officeHours footer-section relative">
+                    <ul>
+                        <h3 class="footer-sub inline-block">Office Hours</h3>
+                        <li>Monday: 3pm - 7pm</li>
+                        <li>Tuesday: 10am-1pm &amp; 3pm - 7pm</li>
+                        <li>Wednesday: 10am-1pm &amp; 3pm - 7pm</li>
+                        <li>Thursday: 3pm - 7pm</li>
+                        <li>Friday: 10am - 2pm</li>
+                        <li>Saturday: 10am - 12:30pm (subject to periodic/seasonal closing)</li>
+                        <li class="inline-block">Sunday: Closed</li>
+                    </ul>
+                </div>
+    
+                <div class="footerQuickLinks footer-section relative">
+                    <ul class="footerQuickLinks">
+                        <h3 class="footer-sub inline-block">Quick Links</h3>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="index.html#ourTeamIntro">About Us</a>
+                        </li>
+                        <li>
+                            <a href="index.html#requestID">Request an Appointment</a>
+                        </li>
+                        <li>
+                            <a href="index.html#testimonialsID">Testimonials</a>
+                        </li>
+                        <li>
+                        <li>
+                            <a href="index.html#contactID">Contacts Us</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="footerGetInTouch footer-section relative">
+                    <ul class="footerGetInTouch">
+                        <h3 class="getInTouch inline-block">Get in Touch</h3>
+                        <li>
+                            <a>(215) 725-3979</a>
+                        </li>
+                        <li>
+                            7256 Rising Sun Ave, Philadelphia
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </main>
 
     <!--Slideshow Script-->
@@ -265,7 +334,7 @@
 
 
     <!--Footer-->
-    <footer>
+    <footer class="desktop-footer">
         <div class="footer-container horizontal-center2 grid-wrap">
             <div class="footer-logo footer-section relative">
                 <h1 class="inline-block horizontal-center">Logo</h1>
@@ -331,6 +400,45 @@
                 scrollTop: $(this.hash).offset().top
             }, 800);
         });
+    </script>
+    
+    <!--Contact Validation Script-->
+    <script type="text/javascript" src="jquery.min.js">
+        $(document).ready(function() {
+            $('#firstName').on('input', function(){
+                var input=$(this);
+                var is_name=input.val();
+                if(is_name){input.removeClass("invalid").addClass("valid");}
+                else {input.removeClass("valid").addClass("invalid");}
+            });
+            
+            $('#subject').keyup(function(event) {
+                var input=$(this);
+                var subject=$(this).val();
+                console.log(subject);
+                if(subject){input.removeClass("invalid").addClass("valid");}
+                else{input.removeClass("valid").addClass("invalid");}
+            });
+        
+            $('#email2').on('input', function() {
+	           var input=$(this);
+	           var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	           var is_email=re.test(input.val());
+	           if(is_email){input.removeClass("invalid").addClass("valid");}
+	           else{input.removeClass("valid").addClass("invalid");}
+            });
+            
+            $('#message').keyup(function(event) {
+                var input=$(this);
+                var message=$(this).val();
+                console.log(message);
+                if(message){input.removeClass("invalid").addClass("valid");}
+                else{input.removeClass("valid").addClass("invalid");}	
+            });
+            
+            
+        });
+    
     </script>
 </body>
 

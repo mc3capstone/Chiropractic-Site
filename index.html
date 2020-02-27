@@ -58,7 +58,7 @@
                 </span>
             </div>
 
-            <!--mobile nav-->
+            <!--Mobile Nav-->
             <nav class="nav-mobile absolute">
                 <ul>
                     <li>About Us</li>
@@ -149,7 +149,7 @@
             </div>
         </section>
 
-        <!--appointment-->
+        <!--Appointment-->
         <section class="appointment section relative" id="requestID">
             <span class="divider absolute"></span>
             <div class="section-padding">
@@ -184,7 +184,7 @@
             </div>
         </section>
 
-        <!--testimonials-->
+        <!--Testimonials-->
         <section class="testimonials section relative">
             <span class="divider absolute"></span>
             <div id="testimonialsID">
@@ -243,7 +243,7 @@
         </section>
     </main>
 
-
+    <!--Slideshow Script-->
     <script>
         var slideIndex = 0;
         showSlides();
@@ -261,9 +261,7 @@
             slides[slideIndex - 1].style.display = "block";
             setTimeout(showSlides, 6000); // Change image every 2 seconds
         }
-
     </script>
-
 
 
     <!--Footer-->
@@ -322,8 +320,10 @@
         </div>
     </footer>
 
-
+    <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Nav Click Script-->
     <script>
         $('a[href*=\\#]').on('click', function(event) {
             event.preventDefault();
@@ -331,7 +331,6 @@
                 scrollTop: $(this.hash).offset().top
             }, 800);
         });
-
     </script>
 </body>
 

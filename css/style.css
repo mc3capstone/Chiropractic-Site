@@ -65,6 +65,10 @@ body {
 html,
 body {
     max-width: 100%;
+<<<<<<< HEAD
+=======
+    overflow-x: hidden; /* "hidden" = no mobile horizontal scroll, no vertical scroll on pc. "visible = opposite */
+>>>>>>> 58131488bf80fb17d7dc92fac4afbb04a0d051ed
 }
 
 .grid-wrap {

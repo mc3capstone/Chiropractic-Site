@@ -28,7 +28,10 @@ var testimonials = {
     },
     render: function() { // only touches the html
         this.$slideshow.slick({
-            dots: true
+            dots: true,
+            autoplay: true,
+            pauseOnFocus: false,
+            pauseOnHover: false
         });
     }
 };

@@ -40,14 +40,6 @@ body {
     background-color: #B4B5B7;
     position: relative;
 }
-.background {
-  background-image: url(../images/spine.jpg);
-  background-repeat: no-repeat;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
 .tint {
   position: absolute;
   top: 0;
@@ -129,19 +121,19 @@ body {
 }
 .divider::before {
   content: "";
-  width: 80px;
+  width: 40px;
   height: 2px;
   background: #E58E46;
   position: absolute;
   transform: rotate(140deg);
   right: 98%;
-  top: 25px;
+  top: 13px;
 }
 .indent {
   text-indent: 30px;
 }
 .title {
-  font-size: 20px;
+  font-size: 18px;
 }
 .text-center {
   text-align: center;
@@ -224,7 +216,7 @@ header {
   width: 50%;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 30px;
+  bottom: 35px;
   z-index: 9;
 }
 .home .logo img {
@@ -261,6 +253,10 @@ header {
 .team {
   z-index: 9;
 }
+
+.team .divider {
+  width: 50%;
+}
 .teamSection {
   display: flex;
   justify-content: space-between;
@@ -275,11 +271,11 @@ header {
   flex: 1;
 }
 #ourTeamIntro h1 {
-  width: 50%;
+  grid-column: 8/13;
 }
 #ourTeamIntro h3 {
   margin: 10px 0 30px 0;
-  width: 50%;
+  grid-column: 8/13;
 }
 .memberContainer {
   order: 2;
@@ -318,7 +314,7 @@ header {
 
 /* testimonials */
 .testimonials .divider {
-  width: 420px;
+  width: 270px;
 }
 #testimonialsID {
   padding-top: 30px;
@@ -329,7 +325,10 @@ header {
 
 /* appointment */
 .appointment .divider {
-  width: 450px;
+  width: 280px;
+}
+.appointment-section + .appointment-section {
+  margin-top: 20px;
 }
 .appointment form {
   margin: 30px 0;
@@ -339,8 +338,20 @@ header {
   width: 100%;
   margin-bottom: 10px;
 }
+.appointment #calendar {
+  opacity: 0;
+}
+.appointment-section:nth-child(3) h3 {
+  margin-bottom: 15px;
+}
 .appointment-section .time-radio {
   display: block;
+}
+.time-radio {
+  text-align: center;
+}
+.time-radio + .time-radio {
+  margin-top: 10px;
 }
 .appointment .appointment-section:nth-child(1) {
   grid-column: 1/13;
@@ -355,6 +366,9 @@ header {
   width: 100%;
   padding: 10px 0;
   margin-top: 15px;
+}
+.appointment-section h3 {
+  text-align: center;
 }
 
 /* Slideshow */
@@ -380,10 +394,11 @@ header {
   margin-bottom: 70px;
 }
 .contactForm .divider {
-  width: 360px;
+  width: 250px;
 }
 .contactForm p {
-  margin: 30px 0;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 .contactForm input, .contactForm label {
   display: block;
@@ -394,7 +409,7 @@ header {
 }
 #formItem2 {
   grid-column: 1/13;
-  margin-right: 30px;
+  margin: 0 30px;
 }
 #formItem3 {
   grid-column: 1/13;
@@ -412,6 +427,8 @@ header {
   background-color: #e3e3e3;
   margin-top: 30px;
   height: 300px;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 /* footer */
@@ -510,14 +527,50 @@ img {vertical-align: middle;}
 
 @media screen and (min-width: 425px) {
   /* home, about, logo */
-  
+  .home-background img {
+    width: 325%;
+  }
+  .home .logo {
+    bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 485px) and (max-width: 767px) {
+  .team {
+    margin-top: 20%;
+  }
+  .profile-pic {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  /* global */
+  .title {
+    font-size: 20px;
+  }
+  .divider::before {
+    width: 80px;
+    top: 25px;
+  }
+
   /* background */
   body {
     background: rgb(180,181,183);
     background: linear-gradient(180deg, rgba(180,181,183,1) 50%, rgba(0,0,0,1) 100%);
+  }
+  .background div {
+    background-image: url(../images/spine.jpg);
+    box-shadow: inset 0px -191px 122px -52px rgba(181,181,183,1);
+    background-size: cover;
+    height: 800px;
+  }
+  .background {
+    width: 100%;
+  }
+  .background img {
+    width: 120%;
   }
 
   /* header */
@@ -535,12 +588,6 @@ img {vertical-align: middle;}
     -moz-box-shadow: 0px 0px 22px 7px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 22px 7px rgba(0,0,0,0.75);
     background: #B4B5B7;
-  }
-  .background {
-    -webkit-box-shadow: inset 0px -200px 130px -37px rgba(180,181,183,1);
-    -moz-box-shadow: inset 0px -200px 130px -37px rgba(180,181,183,1);
-    box-shadow: inset 0px -200px 130px -37px rgba(180,181,183,1);
-    height: 100vh;
   }
 
   /* home, logo, about */
@@ -588,6 +635,9 @@ img {vertical-align: middle;}
   }
 
   /* team */
+  .team .divider {
+    width: 40%;
+  }
   .teamSection {
     flex-direction: row;
   }
@@ -596,6 +646,12 @@ img {vertical-align: middle;}
   }
   .memberContainer {
     order: 1;
+  }
+  #ourTeamIntro h1 {
+    grid-column: 1/13;
+  }
+  #ourTeamIntro h3 {
+    grid-column: 1/13;
   }
   .member {
     margin-bottom: 40px;
@@ -609,6 +665,9 @@ img {vertical-align: middle;}
   }
 
   /* appointment */
+  .appointment-section + .appointment-section {
+    margin-top: 0;
+  }
   .appointment .appointment-section:nth-child(1) {
     grid-column: 1/4;
   }
@@ -621,16 +680,39 @@ img {vertical-align: middle;}
   .appointment .appointment-section + .appointment-section {
     margin-left: 20px;
    }
+   .appointment .divider {
+     width: 320px;
+   }
+   .appointment-section .time-radio {
+     text-align: left;
+   }
+   .appointment-section h3 {
+     text-align: left;
+   }
+
+   /* testimonials */
+   .testimonials .divider {
+     width: 300px;
+   }
 
    /* contact */
    #formItem1 {
     grid-column: 1/4;
   }
    #formItem2 {
-    grid-column: 5/11;
+    grid-column: 4/11;
   }
    #formItem3 {
     grid-column: 11/13;
+  }
+  .contactForm .divider {
+    width: 270px;
+  }
+
+  /* map */
+  .map {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   /* footer */
@@ -693,6 +775,9 @@ img {vertical-align: middle;}
   .section {
     top: 150px;
   }
+  .title {
+    font-size: 30px;
+  }
 
   /* nav */
   .navbar {
@@ -714,9 +799,28 @@ img {vertical-align: middle;}
     height: 150px;
   }
 
+  /* appointment */
+  .appointment .divider {
+    width: 450px;
+  }
+  .appointment .appointment-section + .appointment-section {
+    margin-left: 40px;
+   }
+   .appointment form {
+     padding: 30px 0;
+   }
+
+  /* testimonials */
+  .testimonials .divider {
+    width: 420px;
+  }
+
   /* contact */
   .contactForm {
     margin-top: 200px;
+  }
+  .contactForm .divider {
+    width: 380px;
   }
 
   /* footer */

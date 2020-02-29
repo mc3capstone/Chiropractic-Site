@@ -8,12 +8,14 @@
     <title>Goodman Chiropractic | Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="flatpickr/dist/flatpickr.css">
 </head>
 
 <body>
 
     <section class="background absolute">
-
+        <div>
+        </div>
     </section>
     <div class="tint">
 
@@ -64,7 +66,7 @@
             </div>
             <!--Logo/About-->
             <div class="logo relative">
-                <img src="images/logo.png" alt="logo">
+                <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                 <span class="absolute">7256 Rising Sun Ave, Philadelphia
                     <span class="block">(215) 725-3979</span>
                 </span>
@@ -92,7 +94,7 @@
             <!--Our Team-->
             <div class="teamSection section-padding">
                 <div id="ourTeamIntro">
-                    <div class="title-wrap">
+                    <div class="title-wrap grid-wrap">
                         <h1 class="title">OUR TEAM</h1>
                         <h3>PROFFESIONALS YOU CAN TRUST</h3>
                     </div>
@@ -181,17 +183,17 @@
                     </div>
                     <div class="appointment-section">
                         <h3>Choose a date</h3>
-                        <input type="text" id="date" class="field">
+                        <input type="text" id="calendar" class="field">
                     </div>
                     <div class="appointment-section">
                         <h3>Pick a time</h3>
                         <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
+                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 12:00 pm</span>
+                        <span class="time-radio"><input type="radio" name="time"> 12:00 - 1:00 pm</span>
+                        <span class="time-radio"><input type="radio" name="time"> 1:00 - 2:00 pm</span>
+                        <span class="time-radio"><input type="radio" name="time"> 3:00 - 4:00 pm</span>
+                        <span class="time-radio"><input type="radio" name="time"> 4:00 - 5:00 pm</span>
+                        <span class="time-radio"><input type="radio" name="time"> 6:00 - 7:00 pm</span>
                         <button type="submit" class="button">Book Now</button>
                     </div>
                 </form>
@@ -391,7 +393,7 @@
 
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <script src="flatpickr/dist/flatpickr.min.js"></script>
     <!--Nav Click Script-->
     <script>
         $('a[href*=\\#]').on('click', function(event) {
@@ -401,45 +403,7 @@
             }, 800);
         });
     </script>
-    
-    <!--Contact Validation Script-->
-    <script type="text/javascript" src="jquery.min.js">
-        $(document).ready(function() {
-            $('#firstName').on('input', function(){
-                var input=$(this);
-                var is_name=input.val();
-                if(is_name){input.removeClass("invalid").addClass("valid");}
-                else {input.removeClass("valid").addClass("invalid");}
-            });
-            
-            $('#subject').keyup(function(event) {
-                var input=$(this);
-                var subject=$(this).val();
-                console.log(subject);
-                if(subject){input.removeClass("invalid").addClass("valid");}
-                else{input.removeClass("valid").addClass("invalid");}
-            });
-        
-            $('#email2').on('input', function() {
-	           var input=$(this);
-	           var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-	           var is_email=re.test(input.val());
-	           if(is_email){input.removeClass("invalid").addClass("valid");}
-	           else{input.removeClass("valid").addClass("invalid");}
-            });
-            
-            $('#message').keyup(function(event) {
-                var input=$(this);
-                var message=$(this).val();
-                console.log(message);
-                if(message){input.removeClass("invalid").addClass("valid");}
-                else{input.removeClass("valid").addClass("invalid");}	
-            });
-            
-            
-        });
-    
-    </script>
+    <script src="src/script.js"></script>
 </body>
 
 </html>

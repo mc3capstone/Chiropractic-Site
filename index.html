@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="flatpickr/dist/flatpickr.css">
+    <link rel="stylesheet" href="slick/slick.css">
 </head>
 
 <body>
@@ -207,22 +208,26 @@
                 <h1 class="title text-right">Words From Our Clients</h1>
 
                 <div class="slideshow-container relative">
-
-                    <div class="mySlides fade">
-                        <img src="images/testimomials1.jpg" style="width:100%">
-                        <div class="text absolute">Caption Text</div>
+                    <div class="relative">
+                        <img src="images/testimomials1.jpg">
+                        <p class="caption">caption</p>
                     </div>
-
-                    <div class="mySlides fade">
-                        <img src="images/testimonials2.jpg" style="width:100%">
-                        <div class="text absolute">Caption Two</div>
+                    <div class="relative">
+                        <img src="images/testimonials2.jpg">
+                        <p class="caption">caption</p>
                     </div>
-
-                    <div class="mySlides fade">
-                        <img src="images/testimonials3.jpg">
-                        <div class="text absolute">Caption Three</div>
+                    <div class="relative">
+                        <img src="images/testimonials4.jpg">
+                        <p class="caption">caption</p>
                     </div>
-
+                    <div class="relative">
+                        <img src="images/testimonials5.jpg">
+                        <p class="caption">caption</p>
+                    </div>
+                    <div class="relative">
+                        <img src="images/testimonials6.jpg">
+                        <p class="caption">caption</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -314,27 +319,6 @@
         </footer>
     </main>
 
-    <!--Slideshow Script-->
-    <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 6000); // Change image every 2 seconds
-        }
-    </script>
-
-
     <!--Footer-->
     <footer class="desktop-footer">
         <div class="footer-container horizontal-center2 grid-wrap">
@@ -394,6 +378,7 @@
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="flatpickr/dist/flatpickr.min.js"></script>
+    <script src="slick/slick.min.js"></script>
     <!--Nav Click Script-->
     <script>
         $('a[href*=\\#]').on('click', function(event) {

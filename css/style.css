@@ -284,9 +284,7 @@ header {
 .member {
   display: flex;
   width: 100%;
-  height: 200px;
   margin-bottom: 50px;
-  overflow: hidden;
 }
 .member:nth-child(1) {
   margin-top: 50px;
@@ -298,7 +296,7 @@ header {
   text-align: right;
 }
 .member-text p {
-  padding: 15px 0;
+  padding-top: 15px;
 }
 .profile-pic {
   width: 100px;
@@ -310,6 +308,16 @@ header {
   transform: translateY(-50%);
   position: relative;
   margin-left: 10px;
+  margin-top: 15%;
+}
+.hidden-text {
+  display: none;
+}
+.read-more {
+  color: #fff;
+}
+.less {
+  color: #fff;
 }
 
 /* testimonials */
@@ -746,6 +754,15 @@ img {vertical-align: middle;}
    .testimonials .divider {
      width: 300px;
    }
+   #ourTeamIntro .read-more {
+     display: none;
+   }
+   #ourTeamIntro .less {
+     display: none;
+   }
+   #ourTeamIntro .hidden-text {
+     display: block;
+   }
 
    /* contact */
    #formItem1 {
@@ -851,6 +868,7 @@ img {vertical-align: middle;}
   .profile-pic {
     width: 150px;
     height: 150px;
+    margin-top: 10%;
   }
 
   /* appointment */

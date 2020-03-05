@@ -393,18 +393,12 @@
 
     <script src="src/script.js"></script>
 
-    <!--validate contact us form-->
+    <!--Validate Contact Us Form-->
     <script src="js/form-validation.js"></script>
     <script>
         $(function() {
-            // Initialize form validation on the registration form.
-            // It has the name attribute "registration"
             $("form[name='contactform']").validate({
-                // Specify validation rules
                 rules: {
-                    // The key name on the left side is the name attribute
-                    // of an input field. Validation rules are defined
-                    // on the right side
                     firstName: "required",
                     subject: "required",
                     email: {
@@ -413,15 +407,12 @@
                     },
                     message: "required"
                 },
-                // Specify validation error messages
                 messages: {
                     firstName: "Please enter your full name",
                     subject: "Please enter a subject",
                     email: "Please enter a valid email address",
                     message: "Please type your message here"
                 },
-                // Make sure the form is submitted to the destination defined
-                // in the "action" attribute of the form when valid
                 submitHandler: function(form) {
                     form.submit();
                 }

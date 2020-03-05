@@ -311,6 +311,9 @@ header {
   position: relative;
   margin-left: 10px;
 }
+.hidden-text {
+  display: none;
+}
 
 /* testimonials */
 .testimonials img {

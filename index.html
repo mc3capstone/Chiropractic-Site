@@ -239,7 +239,7 @@
             <div class="section-padding">
                 <h1 class="title text-right">Get in touch with us</h1>
                 <p>Don’t hesitate to call and ask for me if there are any questions you might have related to our services.</p>
-                <form class="grid-wrap relative" id="contactForm" method="post" action="">
+                <form class="grid-wrap relative" id="contactForm" method="post" action="" name="contactform">
                     <div id="formItem1">
                         <label for="firstName">Full name</label>
                         <input type="text" id="firstName" name="firstName" value="">
@@ -268,7 +268,7 @@
                 <div class="footer-logo footer-section relative">
                     <h1 class="inline-block horizontal-center">Logo</h1>
                 </div>
-    
+
                 <div class="officeHours footer-section relative">
                     <ul>
                         <h3 class="footer-sub inline-block">Office Hours</h3>
@@ -281,7 +281,7 @@
                         <li class="inline-block">Sunday: Closed</li>
                     </ul>
                 </div>
-    
+
                 <div class="footerQuickLinks footer-section relative">
                     <ul class="footerQuickLinks">
                         <h3 class="footer-sub inline-block">Quick Links</h3>
@@ -303,7 +303,7 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <div class="footerGetInTouch footer-section relative">
                     <ul class="footerGetInTouch">
                         <h3 class="getInTouch inline-block">Get in Touch</h3>
@@ -379,6 +379,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="flatpickr/dist/flatpickr.min.js"></script>
     <script src="slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <!--Nav Click Script-->
     <script>
         $('a[href*=\\#]').on('click', function(event) {
@@ -387,8 +389,47 @@
                 scrollTop: $(this.hash).offset().top
             }, 800);
         });
+
     </script>
+
     <script src="src/script.js"></script>
+
+    <!--validate contact us form-->
+    <script src="js/form-validation.js"></script>
+    <script>
+        $(function() {
+            // Initialize form validation on the registration form.
+            // It has the name attribute "registration"
+            $("form[name='contactform']").validate({
+                // Specify validation rules
+                rules: {
+                    // The key name on the left side is the name attribute
+                    // of an input field. Validation rules are defined
+                    // on the right side
+                    firstName: "required",
+                    subject: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    message: "required"
+                },
+                // Specify validation error messages
+                messages: {
+                    firstName: "Please enter your full name",
+                    subject: "Please enter a subject",
+                    email: "Please enter a valid email address",
+                    message: "Please type your message here"
+                },
+                // Make sure the form is submitted to the destination defined
+                // in the "action" attribute of the form when valid
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        });
+
+    </script>
 </body>
 
 </html>

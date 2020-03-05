@@ -472,6 +472,10 @@ li.slick-active button {
   width: 100%;
   height: 100%;
 }
+.error {
+    color: red;
+    font-size: 14px;
+}
 
 /* map */
 .map {

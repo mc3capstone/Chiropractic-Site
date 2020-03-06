@@ -729,6 +729,15 @@ img {vertical-align: middle;}
     width: 120px;
     height: 120px;
   }
+  #ourTeamIntro .read-more {
+    display: none;
+  }
+  #ourTeamIntro .less {
+    display: none;
+  }
+  #ourTeamIntro .hidden-text {
+    display: block;
+  }
 
   /* appointment */
   .appointment-section + .appointment-section {
@@ -761,14 +770,8 @@ img {vertical-align: middle;}
    .testimonials .divider {
      width: 300px;
    }
-   #ourTeamIntro .read-more {
-     display: none;
-   }
-   #ourTeamIntro .less {
-     display: none;
-   }
-   #ourTeamIntro .hidden-text {
-     display: block;
+   .testimonials img:hover {
+    cursor: grab;
    }
 
    /* contact */
@@ -870,6 +873,9 @@ img {vertical-align: middle;}
   /* team */
   .team {
     z-index: 9;
+  }
+  .member {
+    margin-bottom: 0;
   }
   .profile-pic {
     width: 150px;

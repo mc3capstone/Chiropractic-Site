@@ -15,19 +15,22 @@ var team = {
     },
     bindEvents: function() {
         this.$expand.on("click", this.reveal);
-        this.$less.on("click", this.condense.bind(this));
+        this.$less.on("click", this.condense);
     },
     reveal: function() {
         var thisParent = $(this).parent(); // parent element of current clicked $expand button
-        thisParent.find(".hidden-text").slideDown();
+        thisParent.find(".hidden-text").slideDown("fast");
         thisParent.find(".read-more").hide();
-        
-        console.log($(".team-wrap").siblings());
-        $(".team-wrap").next("team-wrap").hide();
     },
     condense: function() {
-        this.$hiddenText.slideUp();
-        this.$expand.show();
+        var thisParent = $(this).parent(); // parent element of current clicked $expand button
+        thisParent.slideUp("fast");
+
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            $(".read-more").not("#special-expand").show();
+        } else {
+            $(".read-more").show();
+        }
     }
 };
 team.init();

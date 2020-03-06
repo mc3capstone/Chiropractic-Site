@@ -71,6 +71,29 @@ var testimonials = {
     }
 };
 testimonials.init();
-
+//Contact Us
+        $(function() {
+            $("form[name='contactform']").validate({
+                rules: {
+                    firstName: "required",
+                    subject: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    message: "required"
+                },
+                messages: {
+                    firstName: "Please enter your full name",
+                    subject: "Please enter a subject",
+                    email: "Please enter a valid email address",
+                    message: "Please type your message here"
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        });
+    
 //---------------------------------------------------------------
 })();

@@ -373,7 +373,7 @@ header {
   margin-bottom: 15px;
 }
 .radio-wrap {
-  width: 40%;
+  width: 150px;
   margin: 0 auto;
 }
 .appointment-section .time-radio {
@@ -381,10 +381,37 @@ header {
 }
 .time-radio {
   text-align: center;
+  position: relative;
+}
+.custom-radio::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 10px;
+  height: 10px;
+  left: 20px;
+  border-radius: 50%;
+  left: 25%;
+  top: 25%;
+  display: none;
 }
 .time-radio input[type="radio"] {
   float: left;
-  
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+.time-radio input[type="radio"]:checked ~ .custom-radio::after {
+  display: block;
+}
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  margin-left: 0 !important;
+  border-radius: 50%;
 }
 .time-radio + .time-radio {
   margin-top: 15px;
@@ -798,6 +825,9 @@ img {vertical-align: middle;}
   #ourTeamIntro .hidden-text {
     display: block;
   }
+  .member-text .hidden-text {
+    width: 100%;
+  }
 
   /* appointment */
   .appointment-section + .appointment-section {
@@ -831,7 +861,10 @@ img {vertical-align: middle;}
      width: 70%;
    }
    .radio-wrap {
-     width: 100%;
+     width: 200px;
+   }
+   .time-radio span {
+    margin-left: 10px;
    }
 
    /* testimonials */

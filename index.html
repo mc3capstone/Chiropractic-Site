@@ -228,21 +228,24 @@
                         <label>Phone</label>
                         <input type="phone" id="phone" class="field">
                         <input type="checkbox">
+                        <span class="custom-checkbox"></span>
                         <span>Yes, I would like to receive eye appointment reminders via text message.</span>
                     </div>
                     <div class="appointment-section">
                         <h3>Choose a date</h3>
-                        <input type="text" id="calendar" class="field">
+                        <input type="text" id="calendar">
                     </div>
                     <div class="appointment-section">
                         <h3>Pick a time</h3>
-                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 11:00 am</span>
-                        <span class="time-radio"><input type="radio" name="time"> 10:00 - 12:00 pm</span>
-                        <span class="time-radio"><input type="radio" name="time"> 12:00 - 1:00 pm</span>
-                        <span class="time-radio"><input type="radio" name="time"> 1:00 - 2:00 pm</span>
-                        <span class="time-radio"><input type="radio" name="time"> 3:00 - 4:00 pm</span>
-                        <span class="time-radio"><input type="radio" name="time"> 4:00 - 5:00 pm</span>
-                        <span class="time-radio"><input type="radio" name="time"> 6:00 - 7:00 pm</span>
+                        <div class="radio-wrap">
+                            <span class="time-radio"><input type="radio" name="time"><span>10:00 - 11:00 am</span></span>
+                            <span class="time-radio"><input type="radio" name="time"> <span>11:00 - 12:00 pm</span></span>
+                            <span class="time-radio"><input type="radio" name="time"><span>12:00 - 1:00 pm</span></span>
+                            <span class="time-radio"><input type="radio" name="time"><span>1:00 - 2:00 pm</span></span>
+                            <span class="time-radio"><input type="radio" name="time"><span>3:00 - 4:00 pm</span></span>
+                            <span class="time-radio"><input type="radio" name="time"><span>4:00 - 5:00 pm</span></span>
+                            <span class="time-radio"><input type="radio" name="time"><span>6:00 - 7:00 pm</span></span>
+                        </div>
                         <button type="submit" class="button">Book Now</button>
                     </div>
                 </form>
@@ -439,35 +442,6 @@
         });
     </script>
     <script src="src/script.js"></script>
-
-    <!-- Form validation js
-    <script src="js/form-validation.js"></script>
-    <script>
-        $(function() {
-            $("form[name='contactform']").validate({
-                rules: {
-                    firstName: "required",
-                    subject: "required",
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    message: "required"
-                },
-                messages: {
-                    firstName: "Please enter your full name",
-                    subject: "Please enter a subject",
-                    email: "Please enter a valid email address",
-                    message: "Please type your message here"
-                },
-                submitHandler: function(form) {
-                    form.submit();
-                }
-            });
-        });
-    </script>
-    -->
-
 </body>
 
 </html>

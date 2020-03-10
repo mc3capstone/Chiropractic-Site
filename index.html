@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="flatpickr/dist/flatpickr.css">
     <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
 </head>
 
 <body>
@@ -261,23 +264,27 @@
                 <div class="slideshow-container relative">
                     <div class="relative">
                         <img src="images/testimomials1.jpg">
-                        <p class="caption">caption</p>
+                        <p class="caption text-center">I have been a patient of Goodman Chiropractic for about three years now. They have a friendly staff and Doctor Goodman is very thorough and attentive to your needs.<p class="client absolute">Marie R. Bustleton, Philadelphia, PA</p></p>
                     </div>
                     <div class="relative">
                         <img src="images/testimonials2.jpg">
                         <p class="caption">caption</p>
+                        <h5 class="client"></h5>
                     </div>
                     <div class="relative">
                         <img src="images/testimonials4.jpg">
                         <p class="caption">caption</p>
+                        <h5 class="client"></h5>
                     </div>
                     <div class="relative">
                         <img src="images/testimonials5.jpg">
                         <p class="caption">caption</p>
+                        <h5 class="client"></h5>
                     </div>
                     <div class="relative">
                         <img src="images/testimonials6.jpg">
                         <p class="caption">caption</p>
+                        <h5 class="client"></h5>
                     </div>
                 </div>
             </div>
@@ -293,11 +300,11 @@
                 <form class="grid-wrap relative" id="contactForm" method="post" action="" name="contactform" enctype="text/plain">
                     <div id="formItem1">
                         <label for="firstName">Full name</label>
-                        <input type="text" id="firstName" name="firstName" value="">
+                        <input type="text" id="firstName" class="field" name="firstName">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" value="">
+                        <input type="text" id="subject" class="field" name="subject">
                         <label for="email">Email</label>
-                        <input type="email" id="email2" name="email" value="">
+                        <input type="email" id="email2" class="field" name="email">
                     </div>
                     <div id="formItem2">
                         <label for="message">Message</label>
@@ -430,8 +437,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="flatpickr/dist/flatpickr.min.js"></script>
     <script src="slick/slick.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    <script src="js/form-validation.js"></script>
     <!--Nav Click Script-->
     <script>
         $('a[href*=\\#]').on('click', function(event) {

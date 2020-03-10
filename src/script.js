@@ -71,6 +71,7 @@ var testimonials = {
     }
 };
 testimonials.init();
+
 //Contact Us
         $(function() {
             $("form[name='contactform']").validate({
@@ -94,6 +95,28 @@ testimonials.init();
                 }
             });
         });
+
+// map 
+var map = {
+    init: function() {
+        this.cacheDOM();
+        this.render();
+    },
+    cacheDOM: function() {
+        this.map = L.map("mapid");
+    },
+    render: function() {
+        this.map.setView([40.061320, -75.084350], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(this.map);
+
+        L.marker([40.061320, -75.084350]).addTo(this.map)
+        .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+        .openPopup();
+    }
+};
+map.init();
     
 //---------------------------------------------------------------
 })();

@@ -166,6 +166,10 @@ label::after {
 .field {
   margin-top: 5px;
 }
+textarea {
+  height: 100px !important;
+  border-radius: 4px;
+}
 
 
 /* header, nav */
@@ -360,7 +364,7 @@ header {
 .appointment form {
   margin: 30px 0;
 }
-.appointment .field {
+.field {
   display: block;
   width: 100%;
   margin-bottom: 20px;
@@ -583,6 +587,9 @@ li.slick-active button {
   margin-right: 5%;
   margin-left: 5%;
 }
+#mapid {
+  height: 300px;
+}
 
 /* footer */
 footer {
@@ -706,6 +713,9 @@ img {vertical-align: middle;}
   .divider::before {
     width: 80px;
     top: 25px;
+  }
+  textarea {
+    height: 100% !important;
   }
 
   /* background */

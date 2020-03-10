@@ -72,7 +72,7 @@ var testimonials = {
 };
 testimonials.init();
 
-//Contact Us
+//Contact Us Validation
         $(function() {
             $("form[name='contactform']").validate({
                 rules: {
@@ -117,6 +117,29 @@ var map = {
     }
 };
 map.init();
+    
+//Appointment Validation
+        $(function() {
+            $("form[name='appointmentform']").validate({
+                rules: {
+                    name: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    phone: "required",
+                },
+                messages: {
+                    name: "Please enter your full name",
+                    email: "Please enter a valid email address",
+                    phone: "Please enter your phone numer"
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        });
+
     
 //---------------------------------------------------------------
 })();

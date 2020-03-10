@@ -111,6 +111,7 @@
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(this.map);
 
+<<<<<<< HEAD
             L.marker([40.061320, -75.084350]).addTo(this.map)
                 .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
                 .openPopup();
@@ -126,6 +127,30 @@
                 email: {
                     required: true,
                     email: true
+=======
+        L.marker([40.061320, -75.084350]).addTo(this.map)
+        .bindPopup('Goodman Family Chiropractic<br>7256 Rising Sun Ave')
+        .openPopup();
+    }
+};
+map.init();
+    
+//Appointment Validation
+        $(function() {
+            $("form[name='appointmentform']").validate({
+                rules: {
+                    name: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    phone: "required",
+                },
+                messages: {
+                    name: "Please enter your full name",
+                    email: "Please enter a valid email address",
+                    phone: "Please enter your phone numer"
+>>>>>>> 1f85e9925c2717fc8d362da432150856775d46df
                 },
                 phone: "required",
             },

@@ -259,6 +259,19 @@ header {
 .nav-mobile {
   z-index: 9;
 }
+.nav-mobile ul {
+  width: 150px;
+}
+.nav-mobile ul li {
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(193,190,190,0.70) 50%);
+  margin-bottom: 20px;
+  padding: 5px 0 5px 5px;
+  border-radius: 4px;
+}
+.nav-mobile ul li a {
+  font-size: 12px;
+}
 
 /* team */
 .team {
@@ -605,6 +618,7 @@ footer {
 footer ul li {
   list-style: none;
   margin-bottom: 5px;
+  line-height: 21px;
 }
 footer ul li a {
   text-decoration: none;

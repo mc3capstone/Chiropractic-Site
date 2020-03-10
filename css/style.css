@@ -511,6 +511,8 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+  font-size: 12px;
+  line-height: 20px;
 }
 .slick-arrow {
   position: absolute;
@@ -899,6 +901,10 @@ img {vertical-align: middle;}
    .testimonials img:hover {
     cursor: grab;
    }
+   .slideshow-container .caption {
+     font-size: 14px;
+     line-height: 23px;
+   }
 
    /* contact */
    #formItem1 {
@@ -1023,6 +1029,9 @@ img {vertical-align: middle;}
   /* testimonials */
   .testimonials .divider {
     width: 420px;
+  }
+  .slideshow-container .caption {
+    font-size: 16px;
   }
 
   /* contact */

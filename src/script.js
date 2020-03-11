@@ -112,7 +112,7 @@
             }).addTo(this.map);
 
             L.marker([40.061320, -75.084350]).addTo(this.map)
-                .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+                .bindPopup('7256 Rising Sun Ave')
                 .openPopup();
         }
     };

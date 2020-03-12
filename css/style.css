@@ -1023,6 +1023,45 @@ img {vertical-align: middle;}
     width: 320px;
     top: 70%;
   }
+    
+  /* icons */
+    #phoneIcon{
+        width: 10%;
+        margin-right: 2%;
+        padding: 0px;
+    }
+    
+    #teamIcon{
+        width: 8%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+        padding: 0px;
+    }
+    
+    #appointmentIcon{
+        width: 2.5%;
+        margin-left: 1%;
+        padding: 0px;
+    }
+    
+    #testimonialsIcon{
+        width: 3%;
+        margin-left: .5%;
+        padding: 0px;
+    }
+    
+    #contactIcon{
+        width: 3%;
+        margin-left: .5%;
+        padding: 0px;
+    }
+    
+    /* social media icons footer*/
+    #socialFooter{
+        width: 15%;
+        padding: 0px;
+        margin-left: 2%;
+    }
 
   /* team */
   .team {

@@ -1,5 +1,8 @@
 (function () {
     //---------------------------------------------------------------
+    // global variables
+    var submitMessage1 = $(".submit-message1");
+    var submitMessage2 = $(".submit-message2");
 
     // team/about module
     var team = {
@@ -95,6 +98,23 @@
             }
         });
     });
+    var submit = $("#formItem3");
+
+    submit.on("click", function(e) {
+        e.preventDefault();
+
+        var firstName = $("#firstName");
+        var subject = $("#subject");
+        var email = $("#email2");
+        var message = $("#message");
+
+        postData("contact.php", {
+            name: firstName.val(),
+            subject: subject.val(),
+            email: email.val(),
+            message: message.val()
+        }, submitMessage2);
+    });
 
     // map 
     var map = {
@@ -139,7 +159,61 @@
             }
         });
     });
+    var btn = $("#appointment-btn");
+    btn.on("click", function(e) {
+        e.preventDefault();
 
+        var name = $("#name");
+        var appEmail = $("#email");
+        var phone = $("#phone");
+        var calendar = $("#calendar");
+        var timeRadio = $("input[name='time']:checked");
+        var time = $("#time");
+        var postedDate = currentDate();
+        
+        time.val(timeRadio.val());
+
+        postData("post.php", {
+            name: name.val(),
+            email: appEmail.val(),
+            phone: phone.val(),
+            request_date: calendar.val(),
+            request_time: time.val(),
+            posted: postedDate
+        }, submitMessage1);
+    });
+
+// global functions
+    function postData(url, dataObj, message) {
+        var fields = $(".field");
+
+        $.ajax({
+            method: "POST",
+            url: url,
+            data: dataObj,
+            success: function(data) {
+                if (data === "incomplete") {
+                    message.addClass("warning").text("Please fill in all fields");
+                } else if (data === "pass") {
+                    message.addClass("success").text("Thank you! Sent successful");
+                    fields.each(function(i, val) {
+                        $(this).val("");
+                    });
+                } else {
+                    message.addClass("warning").text("Error: Something went wrong");
+                }
+            }
+        });
+    }
+
+    function currentDate() {
+        var d = new Date();
+        var month = d.getMonth() + 1;
+        var day = d.getDate();
+        var output = d.getFullYear() + "-" + (month < 10 ? '0' : '') + month + "-" + (day < 10 ? '0' : '') + day + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.setSeconds();
+        
+        return output;
+    }
 
     //---------------------------------------------------------------
 })();

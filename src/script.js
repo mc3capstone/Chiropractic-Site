@@ -192,6 +192,7 @@
             url: url,
             data: dataObj,
             success: function(data) {
+                console.log(data);
                 if (data === "incomplete") {
                     message.addClass("warning").text("Please fill in all fields");
                 } else if (data === "pass") {

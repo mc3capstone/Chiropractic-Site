@@ -1,5 +1,5 @@
 <?php
-    $conn = new mysqli("localhost", "root", "", "chiro_booking") or die("error");
+    $conn = new mysqli("localhost", "id12578029_jjung", "6LuZdfqkiKEn}qY]", "id12578029_chiro_booking") or die("error");
 
     if (!$conn) {
         echo "connection error".mysqli_connect_error();
@@ -14,7 +14,7 @@
         if (empty($requestDate) || empty($requestTime) || empty($name) || empty($email) || empty($phone)) {
             echo "incomplete";
         } else {
-            $query = "insert into users(email, phone, request_date, request_time, date_posted) values('$email', '$phone', '$requestDate', '$requestTime', '$date')";
+            $query = "insert into users(name, email, phone, request_date, request_time, date_posted) values('$name', '$email', '$phone', '$requestDate', '$requestTime', '$date')";
 
             $result = mysqli_query($conn, $query);
 

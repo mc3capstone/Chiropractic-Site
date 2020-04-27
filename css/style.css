@@ -1,3 +1,7 @@
+@font-face {
+  src: url("/Avenir/AvenirNextCyr-Light.ttf");
+  font-family: Avenir;
+}
 /* Structural Styles */
 
 article, aside, figcaption, figure,
@@ -36,7 +40,7 @@ body {
     line-height: 1;
     background-size: 100%;
     background-repeat: no-repeat;
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-family: Avenir, Arial, sans-serif;
     background-color: #B4B5B7;
     position: relative;
 }
@@ -161,7 +165,6 @@ input {
   -webkit-box-shadow: 0px 14px 14px 4px rgba(0,0,0,0.59);
   -moz-box-shadow: 0px 14px 14px 4px rgba(0,0,0,0.59);
   box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.59);
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 label::after {
   content: "*";
@@ -1076,7 +1079,7 @@ img {vertical-align: middle;}
     top: 150px;
   }
   .title {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   /* nav */

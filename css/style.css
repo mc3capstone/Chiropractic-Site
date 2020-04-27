@@ -1004,28 +1004,14 @@ img {vertical-align: middle;}
 }
 
 /* social icons */
-#iconFacebook {
-    width: 30px;
-    padding: 0px;
-    margin-left: 970%;
+.navbar div {
+  right: 0;
 }
-
-#iconTwitter {
-    width: 30px;
-    padding: 0px;
-    margin-left: 970%;
+.social-icons {
+  margin-left: 10px;
 }
-
-#iconLinkedIn {
-    width: 30px;
-    padding: 0px;
-    margin-left: 970%;
-}
-
-#iconInstagram {
-    width: 30px;
-    padding: 0px;
-    margin-left: 970%;
+.social-icons a img {
+  width: 30px;
 }
 
 /* icons */
